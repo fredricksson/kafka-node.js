@@ -10,4 +10,6 @@ consumer.connect();
 
 consumer.on('ready', () =>{
     console.log("consumer already..")
+    consumer.subscribe(['test'])
+    consumer.consume()
 })
