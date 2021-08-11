@@ -12,4 +12,6 @@ consumer.on('ready', () =>{
     console.log("consumer already..")
     consumer.subscribe(['test'])
     consumer.consume()
+}).on('data', (data) => {
+   console.log(`received message ${data.value}`)
 })
