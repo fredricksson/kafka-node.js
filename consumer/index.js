@@ -1,6 +1,8 @@
 console.log("consumer....")
 import kafka  from "node-rdkafka"
 
+import eventType  from '../eventType.js'
+
 const consumer = kafka.KafkaConsumer({
     'group.id' : 'kafka',
     'metadata.broker.list': 'localhost:9092'
@@ -13,5 +15,5 @@ consumer.on('ready', () =>{
     consumer.subscribe(['test'])
     consumer.consume()
 }).on('data', (data) => {
-   console.log(`received message ${data.value}`)
+   console.log(`received message ${eventType.fromBuffer(data.value)}`)
 })
