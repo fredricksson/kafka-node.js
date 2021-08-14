@@ -1,6 +1,3 @@
-# kafka-node.js
-implementig a simple producer and consumer on node.js using library node-rdkafka
-
 # Saga Pattern Implementation - Nodejs Microservices
 
 ![Implementation](./saga-nodejs.png)
@@ -18,7 +15,13 @@ implementig a simple producer and consumer on node.js using library node-rdkafka
 ``` 
 <Path to kafka>/bin/zookeeper-server-start.sh <Path to Kafka>/config/zookeeper.properties & 
 ```
-/opt/bitnami/kafka//bin/zookeeper-server-start.sh /opt/bitnami/kafka/config/zookeeper.properties &
+// eu ue escrevi
+docker exec -it kafka /opt/bitnami/kafka/bin/zookeeper-server-start.sh /opt/bitnami/kafka/config/zookeeper.properties &
+
+
+
+
+
 ```
 <Path to kafka>/bin/kafka-server-start/sh <Path to Kafka>/config/server.properties 
 ```
